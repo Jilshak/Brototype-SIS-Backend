@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-^6*nz%c_5jnjanmk+yn1r!y)fm_4=q1-rd%_j*w+ssu_1@i(-$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -80,14 +80,10 @@ TEMPLATES = [
 ]
 
 
-# WSGI_APPLICATION = 'main.wsgi.application'
+
 ASGI_APPLICATION = 'main.asgi.application'
 
-# CHANNEL_LAYERS = {
-#     'default': {
-#         'BACKEND': 'channels.layers.InMemoryChannelLayer',
-#     },
-# }
+
 
 CHANNEL_LAYERS = {
     "default": {
