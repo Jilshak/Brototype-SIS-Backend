@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'chats',
 
 ]
-CHANNEL_LAYERS_DEBUG = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
