@@ -3,7 +3,7 @@ from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter, URLRouter
 from .routing import websocket_urlpatterns
 import django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "main.settings")
 django.setup()
 
 
