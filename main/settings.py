@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from datetime import timedelta
 from django.conf import settings
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,7 +30,7 @@ SECRET_KEY = 'django-insecure-^6*nz%c_5jnjanmk+yn1r!y)fm_4=q1-rd%_j*w+ssu_1@i(-$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+
 
 
 # Application definition
@@ -89,7 +90,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],  # Adjust the host and port as needed
+            "hosts": [(config('redis'))],  # Adjust the host and port as needed
         },
     },
 }

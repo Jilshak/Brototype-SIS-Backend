@@ -56,27 +56,3 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
     
-
-
-# class ScheduledViewSet(viewsets.ViewSet):
-
-#     @action(detail=False, methods=['GET'])
-#     def combined_filtered_data(self, request):
-#         reviewer_id = request.query_params.get('reviewer_id')
-#         advisor_id = request.query_params.get('advisor_id')
-#         intern_id = request.query_params.get('intern_id')
-#         # Similarly, retrieve other query parameters
-
-#         # Use the query parameters to filter data
-#         time_slots = TimeSlot.objects.filter(Q(id=reviewer_id) & Q(booked=True))
-#         advisors = User.objects.filter(id=advisor_id) if advisor_id else User.objects.filter(is_advisor = True)
-#         interns = User.objects.filter(id=intern_id) if intern_id else User.objects.filter(Q(is_user = True) & Q(is_superuser = False) & Q(is_advisor = False) & Q(is_reviewer = False))
-
-#         combined_data = {
-#             'time_slots': time_slots,
-#             'advisors': advisors,
-#             'interns': interns,
-#         }
-#         serializer = ScheduledSerialize(combined_data)
-
-#         return Response(serializer.data)
