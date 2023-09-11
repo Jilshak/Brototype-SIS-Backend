@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 from datetime import timedelta
 from django.conf import settings
-settings.configure()
 from decouple import config
 
 
